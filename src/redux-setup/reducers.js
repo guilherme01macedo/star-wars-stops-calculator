@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-// import Reducer
+import calculatorReducer from '../features/calculatorPage/redux/reducer';
 
 export default combineReducers({
-  // define reducer
+  calculator: calculatorReducer,
 });
