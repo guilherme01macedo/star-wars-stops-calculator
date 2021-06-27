@@ -28,10 +28,9 @@ function getStops(starship, mglt) {
   const dateType = starship.consumables.split(" ").pop();
   const dateValue = parseInt(starship.consumables.split(" ")[0]);
 
-  const totalHours = parseInt(mglt) / parseInt(starship.MGLT); //distancia total/velocidade por hora
+  const totalHours = parseInt(mglt) / parseInt(starship.MGLT);
   const totalDays = parseInt(totalHours) / 24;
 
-  console.log(totalHours);
   if (dateType === "week" || dateType === "weeks") {
     return Math.floor(totalDays / 7 / dateValue);
   }
