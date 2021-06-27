@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Title from '../../features/commonComponents/title';
+
 import MgltInput from './components/mgltInput';
+import Content from './components/content';
 
 import { IoMdPlanet } from "react-icons/io";
 
@@ -26,7 +28,7 @@ class CalculatorPage extends React.Component {
           <MgltInput />
         </div>
         <div className="calculator-page_content">
-          a
+          <Content />
         </div>
       </div>
     );

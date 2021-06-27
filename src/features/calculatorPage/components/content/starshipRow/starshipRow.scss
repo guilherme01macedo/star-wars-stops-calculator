@@ -1,0 +1,106 @@
+.startship-row_container {
+  grid-area: header;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 60px;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+
+  grid-template-areas:
+  "name time stops details";
+  
+  font-size: 13px;
+  &-name {
+    grid-area: name;
+  }
+  &-time {
+    grid-area: time;
+  }
+  &-stops {
+    grid-area: stops;
+  }
+  &-details {
+    grid-area: details;
+  }
+}
+
+.startship-row_container-expanded {
+  grid-area: header;
+  margin-bottom: 8px;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 60px;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
+
+  grid-template-areas:
+  "name time stops details"
+  "model manufacterer cost ."
+  "length maxSpeed crew ."
+  "passengers capacity consumables ."
+  "rating speed class .";
+  
+  font-size: 13px;
+  &-name {
+    grid-area: name;
+  }
+  &-time {
+    grid-area: time;
+  }
+  &-stops {
+    grid-area: stops;
+  }
+  &-details {
+    grid-area: details;
+  }
+  &-model {
+    grid-area: model;
+  }
+  &-manufacturer {
+    grid-area: manufacturer;
+  }
+  &-maxSpeed {
+    grid-area: maxSpeed;
+  }
+  &-length {
+    grid-area: length;
+  }
+  &-manufacturer {
+    grid-area: manufacturer;
+  }
+  &-crew {
+    grid-area: crew;
+  }
+  &-passengers {
+    grid-area: passengers;
+  }
+  &-capacity {
+    grid-area: capacity;
+  }
+  &-consumables {
+    grid-area: consumables;
+  }
+  &-rating {
+    grid-area: rating;
+  }
+  &-speed {
+    grid-area: speed;
+  }
+  &-class {
+    grid-area: class;
+  }
+
+
+  &-item-container{
+    display: flex;
+    flex-direction: column;
+  }
+  &-title{
+    font-size: 11px;
+    font-weight: bold;
+  }
+  &-description{
+    font-size: 13px;
+  }
+}
