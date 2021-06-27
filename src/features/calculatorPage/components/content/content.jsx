@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { FiAlertCircle } from 'react-icons/fi';
 import { GiLightSabers } from 'react-icons/gi';
+import { IoMdRocket } from "react-icons/io";
 
 import StarshipRow from './starshipRow';
 
@@ -39,24 +40,30 @@ const Content = ({
   }
 
   return (
-    <div className="content-container_content">
-      <div className="content-container_content-header">
-        <div className="content-container_content-header-name">
-          Starship name
+    <>
+      <div class="content-container_slider">
+        <IoMdRocket style={{height: '70px', width: '70px', transform: 'rotate(90deg)' }}/>
+      </div>
+
+      <div className="content-container_content">
+        <div className="content-container_content-header">
+          <div className="content-container_content-header-name">
+            Starship name
+          </div>
+          <div className="content-container_content-header-time">
+            Duration of the travel
+          </div>
+          <div className="content-container_content-header-stops">
+            Number of stops
+          </div>
         </div>
-        <div className="content-container_content-header-time">
-          Duration of the travel
-        </div>
-        <div className="content-container_content-header-stops">
-          Number of stops
+        <div className="content-container_content-list">
+          {(starships || []).map((starship, index) => (
+            <StarshipRow starship={starship} key={index} />
+          ))}
         </div>
       </div>
-      <div className="content-container_content-list">
-        {(starships || []).map((starship, index) => (
-          <StarshipRow starship={starship} key={index}/>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 

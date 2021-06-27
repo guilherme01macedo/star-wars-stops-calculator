@@ -74,3 +74,16 @@
   }
 }
 
+.content-container_slider {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: slide 3s 1;
+  animation-direction: alternate;
+  visibility: hidden;
+}
+
+@keyframes slide {
+  0%   {visibility: visible; left: 0%;}
+  100% {visibility: visible; left: 95%;}
+}
